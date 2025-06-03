@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiral AI Chip Visualizer</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <div id="loading-screen">
+            <div class="spinner"></div>
+            <p>Loading Spiral AI Chip Visualizer...</p>
+        </div>
+        
+        <div id="canvas-container"></div>
+        
+        <div id="ui-overlay">
+            <div id="toolbar">
+                <button id="toggleThermal" class="tool-btn">
+                    <span class="icon">🌡️</span> Thermal View
+                </button>
+                <button id="toggleDataFlow" class="tool-btn">
+                    <span class="icon">↔️</span> Data Flow
+                </button>
+                <button id="toggleShader" class="tool-btn">
+                    <span class="icon">🎨</span> Shader Mode
+                </button>
+                <button id="toggleNodeGraph" class="tool-btn">
+                    <span class="icon">📊</span> Node Graph
+                </button>
+                <button id="toggleChipMap" class="tool-btn">
+                    <span class="icon">🗺️</span> Chip Map
+                </button>
+                <button id="exportPng" class="tool-btn">
+                    <span class="icon">📷</span> Snapshot
+                </button>
+            </div>
+            <div id="tooltip" class="hidden"></div>
+        </div>
+    </div>
+
+    <!-- Three.js and dependencies -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <!-- Application scripts -->
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
